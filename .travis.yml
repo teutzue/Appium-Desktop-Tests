@@ -2,6 +2,8 @@ language: "node_js"
 node_js:
   - 6.10.3
 
+os: osx
+
 before_install:
   - npm i -g
   - npm install -g appium

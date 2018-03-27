@@ -12,7 +12,7 @@ install:
   - npm install -g appium
   - npm install wd
   - appium &
-
+  - npm run windows-simple
 
 
 # Post-install test scripts.
