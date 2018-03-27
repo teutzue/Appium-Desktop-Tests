@@ -5,8 +5,10 @@ node_js:
 before_install:
   - npm i -g
   - npm -v
+  - npm install -g appium
   - appium -v
+  - npm install wd
+  - appium &
 
 before_script:
-  - npm install -g
-  - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+  
