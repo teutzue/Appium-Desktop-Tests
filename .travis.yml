@@ -11,4 +11,5 @@ before_install:
   - appium &
 
 before_script:
-  
+  - npm run mac-simple
+
