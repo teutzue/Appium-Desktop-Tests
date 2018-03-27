@@ -3,11 +3,10 @@ node_js:
   - 6.10.3
 
 before_install:
-  - npm i -g npm@version-number
+  - npm i -g
   - npm -v
   - appium -v
 
 before_script:
   - npm install -g
   - /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  
