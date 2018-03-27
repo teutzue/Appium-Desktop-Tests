@@ -1,0 +1,32 @@
+{
+  "name": "appium-mac-desktop",
+  "version": "1.0.0",
+  "description": "Appium Tests For Penneo's destop app",
+  "main": "index.js",
+  "keywords": [
+    "appium",
+    "mac-testing"
+  ],
+  "author": "tc@penneo.com",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "chai": "^2.2.0",
+    "chai-as-promised": "^5.0.0",
+    "colors": "^1.0.3",
+    "express": "^4.12.3",
+    "mocha": "^2.4.5",
+    "q": "^2.0.2",
+    "underscore": "^1.8.3",
+    "wd": "^0.3.11"
+  },
+  "scripts": {
+    "mac-simple": "mocha mac-simple.js",
+    "windows-simple": "mocha windows-simple.js",
+    "windows-setup": "mocha windows-setup.js",
+    "windows-print": "mocha windows-print.js"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^3.0.0-beta-3",
+    "wd-bridge": "0.0.2"
+  }
+}
