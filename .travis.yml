@@ -4,9 +4,7 @@ node_js:
 
 before_install:
   - npm i -g
-  - npm -v
   - npm install -g appium
-  - appium -v
   - npm install wd
   - appium &
 
