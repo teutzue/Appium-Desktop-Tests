@@ -22,7 +22,7 @@ describe("windows simple", function () {
         //desired.app = require("./helpers/apps").windowsTestApp;
         console.log(desired);
         if (process.env.npm_package_config_sauce) {
-            desired.name = 'windoews - simple';
+            desired.name = 'windows - simple';
             desired.tags = ['sample'];
         }
 
@@ -42,7 +42,7 @@ describe("windows simple", function () {
         allPassed = allPassed && this.currentTest.state === 'passed';
     });
 
-    //when you use the DEAS bundled installer
+    //when bundled installer is used
     it("intall the application", function () {
         return driver.element('name', 'Continue').doubleclick();
     });
@@ -58,7 +58,7 @@ describe("windows simple", function () {
     it("login into the Penneo application", function () {
         return driver
             .sleep(6000)
-            .element('name', 'Enter your username')
+            .element('name', 'Enter your username') //try to identify by classname/id
             //.clear()
             .click()
 

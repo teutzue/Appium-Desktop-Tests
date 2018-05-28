@@ -10,6 +10,6 @@ before_install:
   - npm install wd
   - appium &
 
-before_script:
-  - npm run mac-simple
+script:
+- npm run mac-simple
 

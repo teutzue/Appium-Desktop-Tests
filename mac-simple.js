@@ -42,11 +42,34 @@ describe("mac simple", function () {
         allPassed = allPassed && this.currentTest.state === 'passed';
     });
 
-   /* it("should open the installer", function () {
+    it("login into the Penneo application", function () {
+        return driver
+            .sleep(6000)
+            .element('name', 'Enter your username')
+            //.clear()
+            .click()
+
+            .sendKeys('tc@penneo.com')
+
+            .sleep(500)
+
+            .element('name', 'Password')
+            //.clearElement('Enter your username')
+            .click()
+            .sendKeys('test')//change the password to a valid one to see the test working
+
+            .element('name', 'Log in to Penneo')
+            .click()
+
+            .element('name', 'Add Documents')//this does not work properly
+            .isEnabled();
+        // this fully works, might have problems because the machine is slow :)
+    });
+
+    /*it("should open the installer", function () {
             var installerXPath = "/AXApplication[@AXTitle='Finder']/AXScrollArea[0]/AXGroup[0]/AXImage[@AXTitle='Penneo-2.1.0.dmg']";
             var penneoApp = driver.elementByXPath(installerXPath);
             return penneoApp.doubleclick();
-
     });
 
 
@@ -77,12 +100,10 @@ describe("mac simple", function () {
     it("should open the Penneo application", function () {
         return driver
             .get("Penneo")
-        //todo: click on the pop-ul to open the application first time
-    });*/
+    });
 
 
-    //precondition - the printer should be enbaled in the application and running
-   /* it("should set up the Penneo printer", function () {
+    it("should set up the Penneo printer", function () {
         var systemPreferencesXPath = "/AXApplication[@AXTitle='System Preferences']";
 
         return driver
@@ -113,7 +134,7 @@ describe("mac simple", function () {
             .elementByXPath("/AXApplication[@AXTitle='System Preferences']/AXWindow[@AXTitle='Printers & Scanners' and " +
                 "@AXSubrole='AXStandardWindow']/AXButton[@AXSubrole='AXCloseButton']")
             .click();
-    });*/
+    });
 
     it("should open print a document in Penneo", function () {
         return driver
@@ -122,7 +143,7 @@ describe("mac simple", function () {
             .click()
             .sendKeys('Hello from Appium with JS');
         //to be done: need xcode on the computer
-    });
+    });*/
 
 });
 
